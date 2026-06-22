@@ -81,7 +81,8 @@ const handleTagClick = (tagId: string) => {
 .tags-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
+  grid-auto-rows: min-content;
 }
 
 .tag-item {
@@ -90,12 +91,15 @@ const handleTagClick = (tagId: string) => {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 14px 8px;
+  padding: 12px 6px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
-  min-height: 72px;
+  min-height: 68px;
   user-select: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .tag-item.disabled {

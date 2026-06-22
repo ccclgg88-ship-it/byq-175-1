@@ -136,7 +136,8 @@ const handleTravel = () => {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: linear-gradient(135deg, #0a0e27 0%, #121838 40%, #1a1f4a 100%);
 }
 
@@ -144,7 +145,7 @@ const handleTravel = () => {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -170,7 +171,6 @@ const handleTravel = () => {
   flex-direction: row;
   gap: 48px;
   align-items: stretch;
-  min-height: 0;
 }
 
 .left-panel {
@@ -178,6 +178,7 @@ const handleTravel = () => {
   display: flex;
   flex-direction: column;
   transition: filter 0.5s ease, opacity 0.5s ease;
+  min-height: 680px;
 }
 
 .left-panel.blured {
@@ -198,6 +199,8 @@ const handleTravel = () => {
   gap: 4px;
   animation: fadeInUp 0.8s ease-out 0.1s both;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  flex-shrink: 0;
 }
 
 .section-divider {
